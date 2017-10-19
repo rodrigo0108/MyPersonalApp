@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.rramos.mypersonalapp.R;
 import com.rramos.mypersonalapp.models.User;
 import com.rramos.mypersonalapp.repositories.UserRepository;
+import com.vstechlab.easyfonts.EasyFonts;
 
 import org.polaric.colorful.Colorful;
 
@@ -37,7 +38,7 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        Colorful.init(this);
+
         // Setear Toolbar como action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -99,6 +100,13 @@ public class DashboardActivity extends AppCompatActivity {
 
 //        User user = UserRepository.getUser(username);
 
+        /*String valor2 = sharedPreferences.getString("cosa", null);
+
+        if(valor2!=null){
+            Log.d("preference",valor2);
+        }else{
+            Log.d("preference","esta wea no sirve");
+        }*/
 
 
         // Change navigation header information
@@ -110,8 +118,24 @@ public class DashboardActivity extends AppCompatActivity {
 
         TextView emailText = (TextView) navigationView.getHeaderView(0).findViewById(R.id.menu_email);
         emailText.setText(username);
+//Imprimir la fuente
 
+        TextView fullnames= (TextView)findViewById(R.id.fullname);
+        fullnames.setText(fullname);
 
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String valor = sharedPreferences.getString("fonttexto", null);
+        if(valor != null){
+            if(valor.equals("1")){
+                fullnames.setTypeface(EasyFonts.robotoLightItalic(getApplicationContext()));
+            }else if (valor.equals("2")) {
+                fullnames.setTypeface(EasyFonts.walkwayObliqueSemiBold(getApplicationContext()));
+            }else if(valor.equals("3")){
+                fullnames.setTypeface(EasyFonts.greenAvocado(getApplicationContext()));
+            }
+        }
+
+// Imprimir el estilo
 
 
     }

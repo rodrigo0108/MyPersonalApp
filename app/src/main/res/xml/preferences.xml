@@ -5,12 +5,19 @@
         android:summary="Por favor inserte sus nombres completos"/>
     <CheckBoxPreference android:title="Application Updates"
         android:defaultValue="false"
-        android:summary="This option if selected will allow the application to check for latest versions."
+        android:summary="Seleccione la version"
         android:key="applicationUpdates" />
-    <ListPreference     android:title="Download Details"
-        android:summary="Seleccionar el estilo"
+    <ListPreference     android:title="Tipo de fuente"
+        android:summary="Seleccionar tipo de fuente"
         android:key="downloadType"
         android:defaultValue="1"
         android:entries="@array/listArray"
         android:entryValues="@array/listValues" />
+
+    <ListPreference     android:title="Tipo de estilo"
+        android:summary="Seleccionar el tipo de estilo"
+        android:key="tipoestilo"
+        android:defaultValue="1"
+        android:entries="@array/listArray2"
+        android:entryValues="@array/listValues2" />
 </PreferenceScreen>

@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">MyPersonalApp</string>
     <string-array name="listArray">
-        <item>Primer Estilo</item>
-        <item>Segundo Estilo</item>
-        <item>Tercer Estilo</item>
+        <item>Roboto Light Italic</item>
+        <item>Walkway Oblique Semi Bold</item>
+        <item>Green Avocado</item>
     </string-array>
 
     <string-array name="listValues">
@@ -12,4 +12,15 @@
         <item>3</item>
     </string-array>
 
+    <string-array name="listArray2">
+        <item>Estilo 1</item>
+        <item>Estilo 2</item>
+        <item>Estilo 3</item>
+    </string-array>
+
+    <string-array name="listValues2">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 </resources>

@@ -30,5 +30,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.52inc:scoops:1.0.0'
     compile 'com.github.garretyoder:Colorful:1.1'
+    compile 'com.vstechlab.easyfonts:easyfonts:1.0.0'
+    compile 'com.android.support:support-v4:26.+'
     testCompile 'junit:junit:4.12'
 }
